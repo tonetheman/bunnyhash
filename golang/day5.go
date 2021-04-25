@@ -6,18 +6,8 @@ import (
 	"unsafe"
 )
 
-func checkone(s string) bool {
-	bts := []byte(s)
-	h := md5.New()
-	h.Write(bts)
-	digest := h.Sum(nil)
-	if digest[0] == 0 && digest[1] == 0 && digest[2] < 16 {
-		fmt.Printf("%x", digest[2])
-		return true
-	}
-	return false
-}
-
+// this one seems more like go would be written
+// if I were in fact a good programmer
 func part1() {
 	s := "abc"
 	count := 0
@@ -84,8 +74,8 @@ func testing() {
 	fmt.Println("%x", &s)
 
 	/*
-			I think the code below is calling this?
-			https://github.com/golang/go/blob/master/src/runtime/slice.go
+		I think the code below is calling this?
+		https://github.com/golang/go/blob/master/src/runtime/slice.go
 
 		also this gave me an idea
 		https://github.com/golang/go/blob/master/src/runtime/string.go
@@ -102,7 +92,5 @@ func testing() {
 }
 
 func main() {
-	//testing()
-	//part1()
-	part1a()
+	part1()
 }
