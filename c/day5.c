@@ -70,7 +70,7 @@ void findall() {
         }
         i++;
     }
-    printf("final result %s\n",finalresult);
+    printf("%s\n",finalresult);
 }
 
 void check_strlen() {
