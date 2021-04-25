@@ -18,6 +18,7 @@ func part1() {
 
 		// THIS IS NOT A CAST
 		// it reallocs a copy of the bytes from ts
+		// i think
 		bts := []byte(ts)
 
 		h := md5.New()
@@ -34,6 +35,7 @@ func part1() {
 
 // vain attempt to make go more like
 // c version
+// not used currently
 func part1a() {
 	s := "abc"
 	count := 0
