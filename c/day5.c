@@ -78,7 +78,7 @@ void check_strlen() {
     memset(buffer,'\0',32);
     int ll = sprintf(buffer,"%s%d","abc",123);
     printf("%d\n",ll);
-    printf("strlen %d\n",strlen(buffer));
+    printf("strlen %d\n",(int)(strlen(buffer)));
 }
 
 int main() {
