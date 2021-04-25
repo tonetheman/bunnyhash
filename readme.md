@@ -8,7 +8,7 @@ See here: https://adventofcode.com/2016/day/5
 
 I think that this problem is really the pre-cursor to bunny hash.., so maybe I was sitting around thinking about the things that lead to bunny hash... :shrug:
 
-I implemented day5 in a couple of languages and was surprised that golang was slow.
+I implemented day5 (part1) in a couple of languages and was surprised that golang was slow.
 
 ## requirements
 
