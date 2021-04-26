@@ -13,3 +13,21 @@ I implemented the example from day5 (part1) in a couple of languages and was sur
 ## requirements
 
 For the C version you need to make sure you have openssl-dev installed.
+
+## other notes
+
+
+### C
+The king of speed
+
+### java
+Nothing interesting here.
+
+### golang
+I do not like my implementation in go. Not sure why.
+
+### nim
+When you compile the nim version if you just take the defaults (aka just run make) you will get a slow version. If you run ```make prod``` it is very fast.
+
+### python
+Need to add a version of python that uses ctypes and calls into openssl shared lib. It should be faster?
