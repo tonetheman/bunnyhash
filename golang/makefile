@@ -1,3 +1,3 @@
 
 all :
-	go run day5.go
+	go build day5.go
