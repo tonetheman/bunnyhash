@@ -1,42 +1,48 @@
 #!/bin/bash
 
-COUNT=5
-
 echo "checking c..."
 cd c
 rm -f times.txt
+make clean
 make
-for i in {0.."$COUNT"}
+for i in {0..10}
 do
+	echo "running loop $i"
 	{ time  ./cday5 ; } &>> times.txt
-done
-cd ..
-
-echo "checking java..."
-cd java
-rm -f times.txt
-javac Bh.java
-for i in {0.."$COUNT"}
-do
-	{ time java Bh ; } &>> times.txt
 done
 cd ..
 
 echo "checking golang..."
 cd golang
 rm -f times.txt
-for i in {0.."$COUNT"}
+make clean
+make
+for i in {0..10}
 do
-	{ time go run day5.go ; } &>> times.txt
+	echo "running loop $i"
+	{ time ./day5 ; } &>>times.txt
 done
 cd ..
 
-echo "checking python3..."
-cd python
+echo "checking java..."
+cd java
 rm -f times.txt
-for i in {0.."$COUNT"}
+make clean
+make
+for i in {0..10}
 do
-	{ time python3 day5_py3.py ; } &>> times.txt
+	echo "running loop $i"
+	{ time java Bh ; } &>>times.txt
 done
+cd ..
 
+# this script assumes there are 10 runs in each text file
+echo "java average time"
+grep real java/times.txt | awk '{sum += substr($2,3,length($2)-1)} END {print sum/10.0}'
+
+echo "go average time"
+grep real golang/times.txt | awk '{sum += substr($2,3,length($2)-1)} END {print sum/10.0}'
+
+echo "c average time"
+grep real c/times.txt | awk '{sum += substr($2,3,length($2)-1)} END {print sum/10.0}'
 

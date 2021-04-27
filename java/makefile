@@ -1,4 +1,6 @@
 
 all :
 	javac Bh.java
-	java Bh
+
+clean :
+	rm -f Bh.class
