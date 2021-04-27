@@ -13,6 +13,9 @@ I implemented the example from day5 (part1) in a couple of languages and was sur
 ## requirements
 
 For the C version you need to make sure you have openssl-dev installed.
+For go have go installed (doh)
+For java have java installed (I was using Java headless 11 on ubuntu)
+For nim have nim installed
 
 ## other notes
 
@@ -24,7 +27,7 @@ The king of speed
 Nothing interesting here.
 
 ### golang
-I do not like my implementation in go. Not sure why.
+Got some help it is still slow though.
 
 ### nim
 When you compile the nim version if you just take the defaults (aka just run make) you will get a slow version. If you run ```make prod``` it is very fast.
