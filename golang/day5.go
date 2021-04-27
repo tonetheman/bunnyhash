@@ -16,15 +16,8 @@ func part1() {
 	buffer := bytes.NewBuffer(make([]byte, 64))
 
 	for count < 8 {
-		// create a string
-		//ts := fmt.Sprintf("%s%d", s, i)
 		buffer.Reset()
 		fmt.Fprintf(buffer, "%s%d", s, i)
-
-		// THIS IS NOT A CAST
-		// it reallocs a copy of the bytes from ts
-		// i think
-		//bts := []byte(ts)
 
 		h.Reset()
 		h.Write(buffer.Bytes())
