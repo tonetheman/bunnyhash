@@ -16,9 +16,12 @@ For the C version you need to make sure you have openssl-dev installed.
 For go have go installed (doh)
 For java have java installed (I was using Java headless 11 on ubuntu)
 For nim have nim installed
+For luajit you need luajit installed
 
 ## other notes
 
+### luajit
+Might be new king of speed. Blown away at how fast this is.
 
 ### C
 The king of speed
